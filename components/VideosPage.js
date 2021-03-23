@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { createDrawerNavigator } from 'react-navigation-drawer';
 
-class Home extends Component {
+class VideosPage extends Component {
 
     static navigationOptions = {
-        title: 'Home'
+        title: 'Videos'
     }
 
     render() {
         return (
             <View style={styles.home}>
-                <Text>Home Component</Text>
+                <Text>Videos Component</Text>
             </View>
         );
     }
@@ -26,5 +26,4 @@ const styles = StyleSheet.create({
    }
  })
 
-export default Home;
-
+export default VideosPage;

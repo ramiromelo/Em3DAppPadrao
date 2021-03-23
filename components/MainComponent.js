@@ -4,7 +4,8 @@ import { createStackNavigator } from 'react-navigation-stack';
 import { createDrawerNavigator } from 'react-navigation-drawer';
 import { createAppContainer } from 'react-navigation';
 import Home from './HomeComponent';
-import ImagesPage from './ImagesPage'
+import ImagesPage from './ImagesPage';
+import VideosPage from './VideosPage';
 
 const HomeNavigator = createStackNavigator(
    {
@@ -40,10 +41,28 @@ const ImagesNavigator = createStackNavigator(
    }
 );
 
+const VideosNavigator = createStackNavigator(
+    {
+        Videos: { screen: VideosPage }
+    },
+    {
+        defaultNavigationOptions: {
+            headerStyle: {
+                backgroundColor: '#BEBEBE'
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+                color: '#fff'
+            }
+        }
+    }
+ );
+
 const MainNavigator = createDrawerNavigator(
    {
        Home: { screen: HomeNavigator },
-       Images: { screen: ImagesNavigator }
+       Images: { screen: ImagesNavigator },
+       Videos: { screen: VideosNavigator }
    },
    {
        drawerBackgroundColor: '#FFC95C',

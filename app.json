@@ -3,7 +3,7 @@
     "name": "em3d-padrao",
     "slug": "em3d-padrao",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "default",
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",

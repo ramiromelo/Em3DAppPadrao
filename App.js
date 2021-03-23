@@ -22,4 +22,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  homeComponent: {
+    flex: 1,
+    backgroundColor: '#ABABAB',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 });
