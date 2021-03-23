@@ -1,8 +1,8 @@
 
 
 import React, { Component }  from 'react';
-import { Text, View, Modal, Button, TouchableOpacity, StyleSheet } from 'react-native';
-import { Card } from 'react-native-elements';
+import { Text, View, ScrollView, Modal, Button, TouchableOpacity, StyleSheet } from 'react-native';
+import { Card, Tile } from 'react-native-elements';
 import ImageViewer from 'react-native-image-zoom-viewer';
 
 const images = [{
@@ -26,7 +26,7 @@ class ImagesPage extends Component {
     }
     render() { 
         return ( 
-            <View>
+            <ScrollView>
             <Modal visible={this.state.visibleModal} transparent={true} enableSwipeDown={true}>
                 
                 <TouchableOpacity
@@ -40,11 +40,30 @@ class ImagesPage extends Component {
                 </TouchableOpacity>
                 <ImageViewer imageUrls={images}/>
             </Modal>
-            <Button
-            title="INTERNAS"
-            onPress={() => {
-                this.setState({visibleModal: true})}}
-            />
+            <Tile
+                    imageSrc={require('./images/01.jpg')}
+                    title="IMAGENS INTERNAS"
+                    featured
+                    onPress={() => {
+                        this.setState({visibleModal: true})}}
+                    //caption="Some Caption Text"
+                    />
+            <Tile
+                    imageSrc={require('./images/02.jpg')}
+                    title="IMAGENS EXTERNAS"
+                    featured
+                    onPress={() => {
+                        this.setState({visibleModal: true})}}
+                    //caption="Some Caption Text"
+                    />
+            <Tile
+                    imageSrc={require('./images/02.jpg')}
+                    title="PLANTAS"
+                    featured
+                    onPress={() => {
+                        this.setState({visibleModal: true})}}
+                    //caption="Some Caption Text"
+                    />
             <Button
             title="EXTERNAS"
             onPress={() => {
@@ -55,7 +74,7 @@ class ImagesPage extends Component {
             onPress={() => {
                 this.setState({visibleModal: true})}}
             />
-            </View>
+            </ScrollView>
          );
     }
 }

@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, Platform } from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createDrawerNavigator } from 'react-navigation-drawer';
 import { createAppContainer } from 'react-navigation';
+import { Icon } from 'react-native-elements';
 import Home from './HomeComponent';
 import ImagesPage from './ImagesPage';
 import VideosPage from './VideosPage';
@@ -12,15 +13,21 @@ const HomeNavigator = createStackNavigator(
        Home: { screen: Home }
    },
    {
-       defaultNavigationOptions: {
-           headerStyle: {
-               backgroundColor: '#BEBEBE'
-           },
-           headerTintColor: '#fff',
-           headerTitleStyle: {
-               color: '#fff'
-           }
-       }
+        defaultNavigationOptions: ({navigation}) => ({
+            headerStyle: {
+            backgroundColor: '#5637DD'
+        },
+        headerTintColor: '#fff',
+        headerTitleStyle: {
+            color: '#fff'
+        },
+        headerLeft: <Icon
+            name='bars'
+            type='font-awesome'
+            iconStyle={styles.stackIcon}
+            onPress={() => navigation.toggleDrawer()}
+        />
+        })
    }
 );
 
@@ -29,16 +36,22 @@ const ImagesNavigator = createStackNavigator(
        Images: { screen: ImagesPage }
    },
    {
-       defaultNavigationOptions: {
-           headerStyle: {
-               backgroundColor: '#BEBEBE'
-           },
-           headerTintColor: '#fff',
-           headerTitleStyle: {
-               color: '#fff'
-           }
-       }
-   }
+    defaultNavigationOptions: ({navigation}) => ({
+        headerStyle: {
+        backgroundColor: '#5637DD'
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+        color: '#fff'
+    },
+    headerLeft: <Icon
+        name='bars'
+        type='font-awesome'
+        iconStyle={styles.stackIcon}
+        onPress={() => navigation.toggleDrawer()}
+    />
+    })
+}
 );
 
 const VideosNavigator = createStackNavigator(
@@ -46,16 +59,22 @@ const VideosNavigator = createStackNavigator(
         Videos: { screen: VideosPage }
     },
     {
-        defaultNavigationOptions: {
+        defaultNavigationOptions: ({navigation}) => ({
             headerStyle: {
-                backgroundColor: '#BEBEBE'
-            },
-            headerTintColor: '#fff',
-            headerTitleStyle: {
-                color: '#fff'
-            }
-        }
-    }
+            backgroundColor: '#5637DD'
+        },
+        headerTintColor: '#fff',
+        headerTitleStyle: {
+            color: '#fff'
+        },
+        headerLeft: <Icon
+            name='bars'
+            type='font-awesome'
+            iconStyle={styles.stackIcon}
+            onPress={() => navigation.toggleDrawer()}
+        />
+        })
+   }
  );
 
 const MainNavigator = createDrawerNavigator(
@@ -92,6 +111,14 @@ class Main extends Component {
         );
     }
 }
+
+const styles = StyleSheet.create({
+    stackIcon: {
+        marginLeft: 10,
+        color: '#fff',
+        fontSize: 24
+    }
+});
 
 export default Main;
 
