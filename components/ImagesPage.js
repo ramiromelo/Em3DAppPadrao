@@ -4,6 +4,7 @@ import React, { Component }  from 'react';
 import { Text, View, ScrollView, Modal, Button, TouchableOpacity, StyleSheet } from 'react-native';
 import { Card, Tile } from 'react-native-elements';
 import ImageViewer from 'react-native-image-zoom-viewer';
+import { Icon } from 'react-native-elements';
 
 const images = [{
     url: '',
@@ -14,6 +15,51 @@ const images = [{
     url: '',
     props: {
         source: require('./images/02.jpg')
+    }
+}, {
+    url: '',
+    props: {
+        source: require('./images/03.jpg')
+    }
+}, {
+    url: '',
+    props: {
+        source: require('./images/04.jpg')
+    }
+}, {
+    url: '',
+    props: {
+        source: require('./images/05.jpg')
+    }
+}, {
+    url: '',
+    props: {
+        source: require('./images/06.jpg')
+    }
+}, {
+    url: '',
+    props: {
+        source: require('./images/07.jpg')
+    }
+}, {
+    url: '',
+    props: {
+        source: require('./images/08.jpg')
+    }
+}, {
+    url: '',
+    props: {
+        source: require('./images/09.jpg')
+    }
+}, {
+    url: '',
+    props: {
+        source: require('./images/10.jpg')
+    }
+}, {
+    url: '',
+    props: {
+        source: require('./images/11.jpg')
     }
 }]
 
@@ -36,7 +82,14 @@ class ImagesPage extends Component {
                     {/* <Image
                     style={[styles.modalBackIcon]}
                     source={require('../../theme/images/back-icon.png')} /> */}
-                    <Text style={styles.back}>VOLTAR</Text>
+                    <Text style={styles.back}>
+                        FECHAR
+                        {/* <Icon
+                            name='bars'
+                            type='font-awesome'
+                            style={styles.closeIcon}
+                        /> */}
+                    </Text>
                 </TouchableOpacity>
                 <ImageViewer imageUrls={images}/>
             </Modal>
@@ -49,7 +102,7 @@ class ImagesPage extends Component {
                     //caption="Some Caption Text"
                     />
             <Tile
-                    imageSrc={require('./images/02.jpg')}
+                    imageSrc={require('./images/13.jpg')}
                     title="IMAGENS EXTERNAS"
                     featured
                     onPress={() => {
@@ -82,11 +135,20 @@ class ImagesPage extends Component {
 const styles = StyleSheet.create({
     back: {
       //flex: 1,
-      backgroundColor: '#fff',
-      fontSize: 20,
-        fontWeight: "bold"
-    //   alignItems: 'center',
-    //   justifyContent: 'center',
+        backgroundColor: '#fff',
+        fontSize: 20,
+        fontWeight: "bold",
+        height: 50,
+        alignItems: 'center',
+        textAlign: 'right',
+        backgroundColor: 'black',
+        color: 'white',
+       justifyContent: 'center',
+       textAlignVertical: 'center'
+    },
+    closeIcon: {
+        color: 'white',
+        backgroundColor: 'black',
     }
   })
 

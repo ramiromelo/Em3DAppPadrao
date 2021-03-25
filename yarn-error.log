@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add react-native-image-view
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add expo-av@~8.7.0
 
 PATH: 
   C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\RAMIRO\bin;C:\Python39\Scripts;C:\Python39;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files\Microsoft SQL Server\130\Tools\Binn;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\Program Files (x86)\Yarn\bin;C:\Users\RAMIRO\AppData\Local\Android\Sdk\platform-tools;C:\Users\RAMIRO\AppData\Local\Microsoft\WindowsApps;C:\Users\RAMIRO\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\RAMIRO\AppData\Roaming\npm;C:\Users\RAMIRO\AppData\Local\GitHubDesktop\bin;C:\Users\RAMIRO\AppData\Local\Yarn\bin
@@ -36,13 +36,17 @@ npm manifest:
       "react-native-elements": "^3.3.2",
       "react-native-gesture-handler": "~1.8.0",
       "react-native-image-zoom-viewer": "^3.0.1",
+      "react-native-media-controls": "^2.3.0",
       "react-native-reanimated": "~1.13.0",
       "react-native-safe-area-context": "3.1.9",
       "react-native-screens": "~2.15.2",
+      "react-native-video": "^5.1.1",
+      "react-native-vlc-player": "^0.2.3",
       "react-native-web": "~0.13.12",
       "react-navigation": "^4.4.4",
       "react-navigation-drawer": "^2.7.0",
-      "react-navigation-stack": "^2.10.4"
+      "react-navigation-stack": "^2.10.4",
+      "react-zoom-carousel": "^1.17.0"
     },
     "devDependencies": {
       "@babel/core": "~7.9.0"
