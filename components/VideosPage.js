@@ -5,26 +5,49 @@ import { Video, AVPlaybackStatus } from 'expo-av';
 export default function VideosPage() {
    const video = React.useRef(null);
    const [status, setStatus] = React.useState({});
+   const earthVideo1 = require('./videos/01.mp4');
+   const earthVideo2 = require('./videos/02.mp4');
    return (
       <View style={styles.container}>
        <Video
          ref={video}
          style={styles.video}
-         source={{
-           uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4',
-         }}
+         // source={{
+         //   uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4',
+         // }}
+         source={earthVideo1}
          useNativeControls
          resizeMode="contain"
          isLooping
          onPlaybackStatusUpdate={status => setStatus(() => status)}
        />
        <View style={styles.buttons}>
-         <Button
+         {/* <Button
            title={status.isPlaying ? 'Pause' : 'Play'}
            onPress={() =>
              status.isPlaying ? video.current.pauseAsync() : video.current.playAsync()
            }
-         />
+         /> */}
+       </View>
+       <Video
+         ref={video}
+         style={styles.video}
+         // source={{
+         //   uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4',
+         // }}
+         source={earthVideo2}
+         useNativeControls
+         resizeMode="contain"
+         isLooping
+         onPlaybackStatusUpdate={status => setStatus(() => status)}
+       />
+       <View style={styles.buttons}>
+         {/* <Button
+           title={status.isPlaying ? 'Pause' : 'Play'}
+           onPress={() =>
+             status.isPlaying ? video.current.pauseAsync() : video.current.playAsync()
+           }
+         /> */}
        </View>
      </View>
    );
@@ -34,7 +57,7 @@ export default function VideosPage() {
    container: {
      flex: 1,
      justifyContent: 'center',
-     backgroundColor: '#ecf0f1',
+     backgroundColor: 'black',
    },
    video: {
      alignSelf: 'center',
